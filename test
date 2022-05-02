@@ -1,0 +1,37 @@
+// 
+// Copyright (C) 2021, John Annunziato
+// John Annunziato reserves the right to modify or overwrite this NinjaScript component with each release.
+// V1.0
+//
+
+#region Using declarations
+using Systen;
+using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.ComponentModel;
+using System.Xml.Serialization;
+using NinjaTrader.Data;
+using NinjaTrader.Gui.Chart;
+#endregion
+
+// This namespace holds all indicators and is required. DONT REMOVE
+namespace NinjaTrader.Indicator
+{
+    ///<summary>
+    /// The Supply/Demand Candle  (SDC) indicator displays an arrow whenever new supply or demand forms across different time frames. 
+    /// </summary>
+    [Description(" The Supply/Demand Candle (SDC) indicator displays an arrow whenever new supply or demand forms across different time frames.")]
+    [Gui.Design.DisplayName("Supply/Demand Candle")]
+    public class SDC : Indicator
+    {
+        #region Variables
+
+        #endregion
+        
+        protected override void OnStateChange()
+        {
+            AddPlot()
+        }
+    }
+}
